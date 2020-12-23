@@ -46,7 +46,7 @@ const RoleTable: FC<RoleTableProps> = ({ onCreate, onModify, onAuthorize }) => {
       scroll={{ x: 500 }}
       title={() => (
         <Button type="primary" onClick={onCreate}>
-          <LocaleFormatter id="gloabal.tips.create" />
+          <LocaleFormatter id="global.tips.create" />
         </Button>
       )}
     >
@@ -62,12 +62,12 @@ const RoleTable: FC<RoleTableProps> = ({ onCreate, onModify, onAuthorize }) => {
         render={(_, { status }) => <Tag color={TagColor[status]}>{getLocaleStatus(status)}</Tag>}
       />
       <Table.Column<Role>
-        title={formatMessage({ id: 'gloabal.tips.operation' })}
+        title={formatMessage({ id: 'global.tips.operation' })}
         width={200}
         align="center"
         render={(_, row) => [
           <Button type="link" key="1" onClick={() => onAuthorize({ ...row })}>
-            {formatMessage({ id: 'gloabal.tips.authorize' })}
+            {formatMessage({ id: 'global.tips.authorize' })}
           </Button>,
           <Button
             type="link"
@@ -79,7 +79,7 @@ const RoleTable: FC<RoleTableProps> = ({ onCreate, onModify, onAuthorize }) => {
               })
             }
           >
-            {formatMessage({ id: 'gloabal.tips.modify' })}
+            {formatMessage({ id: 'global.tips.modify' })}
           </Button>,
           <Button
             type="link"
@@ -87,11 +87,11 @@ const RoleTable: FC<RoleTableProps> = ({ onCreate, onModify, onAuthorize }) => {
             onClick={() => {
               Modal.confirm({
                 icon: <ExclamationCircleOutlined />,
-                title: formatMessage({ id: 'gloabal.tips.deleteConfirm' })
+                title: formatMessage({ id: 'global.tips.deleteConfirm' })
               });
             }}
           >
-            {formatMessage({ id: 'gloabal.tips.delete' })}
+            {formatMessage({ id: 'global.tips.delete' })}
           </Button>
         ]}
       />

@@ -3,7 +3,7 @@ import { LogoutOutlined, UserOutlined, MenuUnfoldOutlined, MenuFoldOutlined } fr
 import { Layout, Dropdown, Menu } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import HeaderNoticeComponent from './notice';
-import Avator from 'assets/header/avator.jpeg';
+import Avatar from 'assets/header/avatar.jpeg';
 import { ReactComponent as LanguageSvg } from 'assets/header/language.svg';
 import { ReactComponent as ZhCnSvg } from 'assets/header/zh_CN.svg';
 import { ReactComponent as EnUsSvg } from 'assets/header/en_US.svg';
@@ -55,7 +55,7 @@ const HeaderComponent: FC<Props> = ({ collapsed, toggle }) => {
         <span>
           <UserOutlined />
           <span onClick={() => navigate('/dashboard')}>
-            <LocaleFormatter id="header.avator.account" />
+            <LocaleFormatter id="header.avatar.account" />
           </span>
         </span>
       </Menu.Item>
@@ -64,7 +64,7 @@ const HeaderComponent: FC<Props> = ({ collapsed, toggle }) => {
         <span>
           <LogoutOutlined />
           <span onClick={() => onActionClick('logout')}>
-            <LocaleFormatter id="header.avator.logout" />
+            <LocaleFormatter id="header.avatar.logout" />
           </span>
         </span>
       </Menu.Item>
@@ -104,12 +104,12 @@ const HeaderComponent: FC<Props> = ({ collapsed, toggle }) => {
           {logged ? (
             <Dropdown overlay={menu} trigger={['click']}>
               <span className="user-action">
-                <img src={Avator} className="user-avator" alt="avator" />
+                <img src={Avatar} className="user-avatar" alt="avatar" />
               </span>
             </Dropdown>
           ) : (
             <span style={{ cursor: 'pointer' }} onClick={toLogin}>
-              {formatMessage({ id: 'gloabal.tips.login' })}
+              {formatMessage({ id: 'global.tips.login' })}
             </span>
           )}
         </div>

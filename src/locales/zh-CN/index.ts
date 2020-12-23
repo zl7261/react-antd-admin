@@ -1,5 +1,5 @@
 import { zhCN_account } from './account';
-import { zhCN_avatorDropMenu } from './user/avatorDropMenu';
+import { zhCN_avatarDropMenu } from './user/avatorDropMenu';
 import { zhCN_tagsViewDropMenu } from './user/tagsViewDropMenu';
 import { zhCN_title } from './user/title';
 import { zhCN_globalTips } from './global/tips';
@@ -10,7 +10,7 @@ import { zhCN_documentation } from './documentation';
 
 const zh_CN = {
   ...zhCN_account,
-  ...zhCN_avatorDropMenu,
+  ...zhCN_avatarDropMenu,
   ...zhCN_tagsViewDropMenu,
   ...zhCN_title,
   ...zhCN_globalTips,

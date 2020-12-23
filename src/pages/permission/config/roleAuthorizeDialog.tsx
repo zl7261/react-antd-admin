@@ -62,12 +62,7 @@ const RoleAuthorizeDialog: FC<RoleModifyDialogProps> = ({ onAuthorize, onCancel,
   }, [initData, visible, prevRoleId, values.id, prevLocale, locale]);
 
   return (
-    <Modal
-      title={formatMessage({ id: 'gloabal.tips.authorize' })}
-      visible={visible}
-      onOk={onSubmit}
-      onCancel={onCancel}
-    >
+    <Modal title={formatMessage({ id: 'global.tips.authorize' })} visible={visible} onOk={onSubmit} onCancel={onCancel}>
       {treeData.length ? (
         <Tree
           checkable

@@ -18,7 +18,7 @@ const RoleCreateDialog: FC<RoleCreateDialogProps> = ({ onCreate, onCancel, visib
 
   return (
     <Modal
-      title={formatMessage({ id: 'gloabal.tips.create' })}
+      title={formatMessage({ id: 'global.tips.create' })}
       visible={visible}
       onOk={async () => onCreate((await form.validateFields()) as any)}
       onCancel={onCancel}

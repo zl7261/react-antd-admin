@@ -1,7 +1,7 @@
 import { Notice } from 'interface/layout/notice.interface';
-import { intercepter, mock } from '../config';
+import { interceptor, mock } from '../config';
 
-const mockNoticeList: Notice<'all'>[] = [
+const mockNoticeList: Notice[] = [
   {
     id: '000000001',
     avatar: 'https://gw.alipayobjects.com/zos/rmsportal/ThXAXghbEsBCCSDihZxY.png',
@@ -91,7 +91,7 @@ const mockNoticeList: Notice<'all'>[] = [
   },
   {
     id: '000000012',
-    title: 'ABCD 版本发布',
+    title: 'ABC版本发布',
     description: '冠霖提交于 2017-01-06，需在 2017-01-07 前完成代码变更任务',
     extra: '进行中',
     status: 'processing',
@@ -99,4 +99,4 @@ const mockNoticeList: Notice<'all'>[] = [
   }
 ];
 
-mock.mock('/user/notice', 'get', intercepter(mockNoticeList));
+mock.mock('/user/notice', 'get', interceptor(mockNoticeList));

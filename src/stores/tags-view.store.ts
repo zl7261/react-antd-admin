@@ -20,7 +20,7 @@ const tagsViewSlice = createSlice({
     },
     removeTag(state, action: PayloadAction<string>) {
       const targetKey = action.payload;
-      // dashboard cloud't be closed
+      // dashboard couldn't be closed
       if (targetKey === state.tags[0].id) {
         return;
       }

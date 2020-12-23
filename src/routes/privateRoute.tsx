@@ -17,13 +17,13 @@ const PrivateRoute: FC<RouteProps> = props => {
     <Result
       status="403"
       title="403"
-      subTitle={formatMessage({ id: 'gloabal.tips.unauthorized' })}
+      subTitle={formatMessage({ id: 'global.tips.unauthorized' })}
       extra={
         <Button
           type="primary"
           onClick={() => navigate('/login', { replace: true, state: { from: location.pathname } })}
         >
-          {formatMessage({ id: 'gloabal.tips.goToLogin' })}
+          {formatMessage({ id: 'global.tips.goToLogin' })}
         </Button>
       }
     />

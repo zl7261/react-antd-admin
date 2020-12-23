@@ -15,10 +15,10 @@ export const useGuide = () => {
       keyboardControl: false,
       allowClose: false,
       overlayClickNext: true,
-      closeBtnText: formatMessage({ id: 'app.guide.driverjs.closeBtnText' }),
-      prevBtnText: formatMessage({ id: 'app.guide.driverjs.prevBtnText' }),
-      nextBtnText: formatMessage({ id: 'app.guide.driverjs.nextBtnText' }),
-      doneBtnText: formatMessage({ id: 'app.guide.driverjs.doneBtnText' })
+      closeBtnText: formatMessage({ id: 'app.guide.driver.closeBtnText' }),
+      prevBtnText: formatMessage({ id: 'app.guide.driver.prevBtnText' }),
+      nextBtnText: formatMessage({ id: 'app.guide.driver.nextBtnText' }),
+      doneBtnText: formatMessage({ id: 'app.guide.driver.doneBtnText' })
     })
   );
 

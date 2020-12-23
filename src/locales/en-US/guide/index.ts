@@ -1,15 +1,15 @@
 export const enUS_guide = {
   'app.guide.guideIntro': `The guide page is useful for
-                           some people who entered the 
-                           project for the first time. 
-                           You can briefly introduce 
-                           the features of the project. 
+                           some people who entered the
+                           project for the first time.
+                           You can briefly introduce
+                           the features of the project.
                            Demo is based on`,
   'app.guide.showGuide': 'Show Guide',
-  'app.guide.driverjs.closeBtnText': 'Close',
-  'app.guide.driverjs.prevBtnText': 'Previous',
-  'app.guide.driverjs.nextBtnText': 'Next',
-  'app.guide.driverjs.doneBtnText': 'Done',
+  'app.guide.driver.closeBtnText': 'Close',
+  'app.guide.driver.prevBtnText': 'Previous',
+  'app.guide.driver.nextBtnText': 'Next',
+  'app.guide.driver.doneBtnText': 'Done',
   'app.guide.driverStep.sidebarTrigger.title': 'Sidebar Trigger',
   'app.guide.driverStep.sidebarTrigger.description': 'Open and close the Sidebar',
   'app.guide.driverStep.notices.title': 'Notices',

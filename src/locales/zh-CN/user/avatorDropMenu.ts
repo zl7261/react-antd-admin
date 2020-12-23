@@ -1,6 +1,6 @@
-export const zhCN_avatorDropMenu = {
-  'header.avator.account': '个人设置',
-  'header.avator.logout': '退出登录',
+export const zhCN_avatarDropMenu = {
+  'header.avatar.account': '个人设置',
+  'header.avatar.logout': '退出登录',
   'global.theme.switchTheme': '切换主题',
   'global.theme.switchingTheme': '切换主题中...',
   'global.theme.switchThemeDone': '主题更新成功',

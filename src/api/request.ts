@@ -49,6 +49,7 @@ export type MyResponse<T = any> = Promise<Response<T>>;
  * @param method - request methods
  * @param url - request url
  * @param data - request data or params
+ * @param config
  */
 export const request = <T = any>(
   method: Method,

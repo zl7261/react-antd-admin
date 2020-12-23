@@ -14,7 +14,7 @@ const GuidePage: FC = () => {
         <p className="guide-intro">
           {formatMessage({ id: 'app.guide.guideIntro' })}
           <a
-            className="driverjs-link"
+            className="driver-link"
             href="https://github.com/kamranahmedse/driver.js"
             rel="noopener noreferrer"
             target="_blank"

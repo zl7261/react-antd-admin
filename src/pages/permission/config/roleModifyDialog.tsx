@@ -21,7 +21,7 @@ const RoleModifyDialog: FC<RoleModifyDialogProps> = ({ onModify, onCancel, visib
   };
 
   return (
-    <Modal title={formatMessage({ id: 'gloabal.tips.modify' })} visible={visible} onOk={onSubmit} onCancel={onCancel}>
+    <Modal title={formatMessage({ id: 'global.tips.modify' })} visible={visible} onOk={onSubmit} onCancel={onCancel}>
       <Form>
         <Name />
         <Code />

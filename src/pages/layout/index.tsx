@@ -87,7 +87,6 @@ const LayoutPage: FC = () => {
 
   useEffect(() => {
     newUser && driverStart();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [newUser]);
 
   return (

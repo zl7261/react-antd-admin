@@ -1,4 +1,4 @@
-import { FC, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import React from 'react';
 import { Menu } from 'antd';
 import { MenuList } from '../../interface/layout/menu.interface';
@@ -14,15 +14,15 @@ interface Props {
   menuList: MenuList;
 }
 
-const MenuComponent: FC<Props> = ({ menuList }) => {
-  const [openKeys, setOpenkeys] = useState<string[]>([]);
+const MenuComponent = (props: Props) => {
+  const [openKeys, setOpenKeys] = useState<string[]>([]);
   const [selectedKeys, setSelectedKeys] = useState<string[]>([]);
   const { collapsed, device, locale } = useAppState(state => state.user);
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
   const { pathname } = useLocation();
 
-  const getTitie = (menu: MenuList[0]) => {
+  const getTitle = (menu: MenuList[0]) => {
     return (
       <span style={{ display: 'flex', alignItems: 'center' }}>
         <CustomIcon type={menu.icon!} />
@@ -51,12 +51,12 @@ const MenuComponent: FC<Props> = ({ menuList }) => {
 
   useEffect(() => {
     setSelectedKeys([pathname]);
-    setOpenkeys(collapsed ? [] : ['/' + pathname.split('/')[1]]);
+    setOpenKeys(collapsed ? [] : ['/' + pathname.split('/')[1]]);
   }, [collapsed, pathname]);
 
   const onOpenChange = (keys: string[]) => {
     const key = keys.pop();
-    if (key) setOpenkeys([key]);
+    if (key) setOpenKeys([key]);
   };
 
   return (
@@ -66,11 +66,11 @@ const MenuComponent: FC<Props> = ({ menuList }) => {
       selectedKeys={selectedKeys}
       openKeys={openKeys}
       onOpenChange={onOpenChange as any}
-      className="layout-page-sider-menu"
+      className="layout-page-slider-menu"
     >
-      {menuList?.map(menu =>
+      {props.menuList?.map(menu =>
         menu.children ? (
-          <SubMenu key={menu.path} title={getTitie(menu)}>
+          <SubMenu key={menu.path} title={getTitle(menu)}>
             {menu.children.map(child => (
               <Item key={child.path} onClick={() => onMenuClick(child)}>
                 {child.label[locale]}
@@ -79,7 +79,7 @@ const MenuComponent: FC<Props> = ({ menuList }) => {
           </SubMenu>
         ) : (
           <Item key={menu.path} onClick={() => onMenuClick(menu)}>
-            {getTitie(menu)}
+            {getTitle(menu)}
           </Item>
         )
       )}

@@ -1,5 +1,5 @@
 import { MenuList } from 'interface/layout/menu.interface';
-import { mock, intercepter } from '../config';
+import { mock, interceptor } from '../config';
 
 const mockMenuList: MenuList = [
   {
@@ -92,4 +92,4 @@ const mockMenuList: MenuList = [
   }
 ];
 
-mock.mock('/user/menu', 'get', intercepter(mockMenuList));
+mock.mock('/user/menu', 'get', interceptor(mockMenuList));

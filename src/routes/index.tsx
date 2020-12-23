@@ -1,4 +1,4 @@
-import React, { lazy, FC } from 'react';
+import React, { FC, lazy } from 'react';
 
 import Dashboard from 'pages/dashboard';
 import LoginPage from 'pages/login';
@@ -8,7 +8,7 @@ import WrapperRouteComponent from './config';
 import { useRoutes } from 'react-router-dom';
 
 const NotFound = lazy(() => import(/* webpackChunkName: "404'"*/ 'pages/404'));
-const Documentation = lazy(() => import(/* webpackChunkName: "404'"*/ 'pages/doucumentation'));
+const Documentation = lazy(() => import(/* webpackChunkName: "404'"*/ 'pages/documentation'));
 const Guide = lazy(() => import(/* webpackChunkName: "guide'"*/ 'pages/guide'));
 const RoutePermission = lazy(() => import(/* webpackChunkName: "route-permission"*/ 'pages/permission/route'));
 const ButtonPermission = lazy(() => import(/* webpackChunkName: "button-permission"*/ 'pages/permission/button'));
@@ -61,8 +61,7 @@ const routeList: PartialRouteObject[] = [
 ];
 
 const RenderRouter: FC = () => {
-  const element = useRoutes(routeList);
-  return element;
+  return useRoutes(routeList);
 };
 
 export default RenderRouter;

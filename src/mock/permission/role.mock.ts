@@ -1,4 +1,4 @@
-import { mock, intercepter } from '../config';
+import { mock, interceptor } from '../config';
 import { Role } from 'interface/permission/role.interface';
 
 const roles: Role[] = [
@@ -22,4 +22,4 @@ const roles: Role[] = [
   }
 ];
 
-mock.mock('/permission/role', 'get', intercepter(roles));
+mock.mock('/permission/role', 'get', interceptor(roles));

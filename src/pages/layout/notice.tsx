@@ -108,7 +108,7 @@ const HeaderNoticeComponent: FC = () => {
     >
       <Badge count={noticeCount} overflowCount={999}>
         <span className="notice" id="notice-center">
-          <NoticeSvg className="anticon" />
+          <NoticeSvg className="ant-icon" />
         </span>
       </Badge>
     </Dropdown>

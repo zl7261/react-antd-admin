@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { IntlProvider } from 'react-intl';
-import { lacaleConfig } from './locales';
+import { localeConfig } from './locales';
 import { ConfigProvider } from 'antd';
 import enUS from 'antd/es/locale/en_US';
 import zhCN from 'antd/es/locale/zh_CN';
@@ -31,7 +31,7 @@ const App: React.FC = () => {
 
   return (
     <ConfigProvider locale={getAntdLocale()} componentSize="middle">
-      <IntlProvider locale={locale.split('_')[0]} messages={lacaleConfig[locale]}>
+      <IntlProvider locale={locale.split('_')[0]} messages={localeConfig[locale]}>
         <BrowserRouter>
           <RenderRouter />
         </BrowserRouter>

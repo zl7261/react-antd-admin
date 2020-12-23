@@ -11,7 +11,7 @@ interface Props {
 
 export const CustomIcon: FC<Props> = props => {
   const { type } = props;
-  let com = <GuideSvg />;
+  let com: JSX.Element;
   if (type === 'guide') {
     com = <GuideSvg />;
   } else if (type === 'permission') {
@@ -25,5 +25,5 @@ export const CustomIcon: FC<Props> = props => {
   } else {
     com = <GuideSvg />;
   }
-  return <span className="anticon">{com}</span>;
+  return <span className="ant-icon">{com}</span>;
 };

@@ -7,7 +7,7 @@ import { Role } from 'interface/permission/role.interface';
 import RoleAuthorizeDialog from './roleAuthorizeDialog';
 
 const RolePage: FC = () => {
-  const [mcreateVisible, setCreateVisible] = useState(false);
+  const [createVisible, setCreateVisible] = useState(false);
   const [modifyVisible, setModifyVisible] = useState(false);
   const [authorizeVisible, setAuthorizeVisible] = useState(false);
   const [values, setValues] = useState({} as Role);
@@ -16,7 +16,7 @@ const RolePage: FC = () => {
     <div>
       <RoleSearch />
       <RoleCreateDialog
-        visible={mcreateVisible}
+        visible={createVisible}
         onCancel={() => setCreateVisible(false)}
         onCreate={() => setCreateVisible(false)}
       />
