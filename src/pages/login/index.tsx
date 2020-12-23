@@ -21,7 +21,7 @@ const LoginForm: FC = () => {
   const onFinished = async (form: LoginParams) => {
     const res = dispatch(await loginAsync(form));
     if (!!res) {
-      const from = location.state.from || { pathname: '/dashboard' };
+      const from = location?.state?.from || { pathname: '/dashboard' };
       navigate(from);
     }
   };
